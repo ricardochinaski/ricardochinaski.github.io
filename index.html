@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pliegos RIC Chile V2.0 — Tu guía técnica eléctrica</title>
+  <meta name="description" content="La suite definitiva para instaladores SEC, ingenieros y proyectistas. Normativa completa, asistente IA, calculadoras técnicas y gestión de proyectos.">
+  <meta property="og:title" content="Pliegos RIC Chile V2.0 — Tu guía técnica eléctrica">
+  <meta property="og:description" content="La suite definitiva para instaladores SEC, ingenieros y proyectistas. Normativa completa, asistente IA, calculadoras técnicas y gestión de proyectos.">
+  <meta property="og:image" content="https://play-lh.googleusercontent.com/kJR3hsfP167tsVfb_aUbRjk_mrxl7NX1WE8ffriSWRYw3dil48aMdP7fQDv-9VEUnloFIQhFN9UgJFnhLcHT=w240-h480-rw">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pliegos RIC Chile V2.0 — Tu guía técnica eléctrica">
+  <meta name="twitter:description" content="La suite definitiva para instaladores SEC, ingenieros y proyectistas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            abyss: { DEFAULT: '#040D1A', 50: '#0A1A30', 100: '#0D2240', 200: '#112A50', 300: '#163260', 400: '#1A3A70' },
+            sec: { DEFAULT: '#FFB200', 50: '#FFE6A0', 100: '#FFD970', 200: '#FFC840', 300: '#FFB200' }
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+            'grid-scroll': 'grid-scroll 20s linear infinite'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-12px)' }
+            },
+            'pulse-glow': {
+              '0%, 100%': { boxShadow: '0 0 20px rgba(255,178,0,0.1)' },
+              '50%': { boxShadow: '0 0 40px rgba(255,178,0,0.25)' }
+            },
+            'grid-scroll': {
+              '0%': { transform: 'translateY(0)' },
+              '100%': { transform: 'translateY(-60px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { scroll-behavior: smooth; }
+    body { background: #040D1A; }
+    body.faena-mode { background: #000000; }
+    body.faena-mode .text-slate-400 { color: #e2e8f0 !important; }
+    body.faena-mode .text-slate-500 { color: #f1f5f9 !important; }
+    body.faena-mode .text-slate-600 { color: #f8fafc !important; }
+    body.faena-mode .border-white\\/5 { border-color: rgba(255,178,0,0.2) !important; }
+    body.faena-mode .card-glass { background: rgba(0,0,0,0.8) !important; border-color: rgba(255,178,0,0.2) !important; }
+    body.faena-mode .card-glass:hover { border-color: #FFB200 !important; }
+    body.faena-mode .glass { background: rgba(0,0,0,0.9) !important; }
+    body.faena-mode .grid-bg { background-image: none !important; }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,178,0,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,178,0,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .grid-bg-animated {
+      background-image:
+        linear-gradient(rgba(255,178,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,178,0,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: grid-scroll 30s linear infinite;
+    }
+    .section-page { display: none; }
+    .section-page.active { display: block; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .section-page.active { animation: fadeIn 0.5s ease-out; }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 50%;
+      width: 0; height: 2px;
+      background: #FFB200;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+      border-radius: 1px;
+    }
+    .nav-link.active::after { width: 70%; }
+    .nav-link.active { color: #FFB200; }
+    .glass {
+      background: rgba(4,13,26,0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,178,0,0.06);
+    }
+    .card-glass {
+      background: rgba(15,23,42,0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(71,85,105,0.3);
+      transition: all 0.3s ease;
+    }
+    .card-glass:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,178,0,0.3);
+      box-shadow: 0 12px 40px rgba(255,178,0,0.08);
+    }
+    .glow-border {
+      box-shadow: 0 0 15px rgba(255,178,0,0.1), inset 0 0 15px rgba(255,178,0,0.03);
+    }
+    .btn-sec {
+      background: linear-gradient(135deg, #FFB200, #E89E00);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(255,178,0,0.25);
+    }
+    .btn-sec:hover {
+      background: linear-gradient(135deg, #FFC840, #FFB200);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(255,178,0,0.35);
+    }
+    .btn-outline-sec {
+      border: 1.5px solid rgba(255,178,0,0.3);
+      background: rgba(255,178,0,0.04);
+      transition: all 0.3s ease;
+    }
+    .btn-outline-sec:hover {
+      border-color: #FFB200;
+      background: rgba(255,178,0,0.1);
+      box-shadow: 0 0 24px rgba(255,178,0,0.12);
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 40%, #FFB200 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .tech-step-dot {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: rgba(255,178,0,0.12);
+      border: 2px solid rgba(255,178,0,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 800;
+      color: #FFB200;
+      flex-shrink: 0;
+    }
+    .step-wrapper .tech-step-dot {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .legal-accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .legal-accordion-content.open {
+  max-height: 2000px;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+    .carousel-dot { transition: all 0.4s ease; }
+    .carousel-dot.active { background: #FFB200; width: 18px; border-radius: 3px; box-shadow: 0 0 8px rgba(255,178,0,0.3); }
+    .disclaimer-card {
+      border-left: 3px solid #FFB200;
+      background: rgba(255,178,0,0.04);
+      box-shadow: 0 0 30px rgba(255,178,0,0.04);
+    }
+    .badge-tech {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: rgba(255,178,0,0.08);
+      border: 1px solid rgba(255,178,0,0.15);
+      color: #FFB200;
+    }
+    .counter-value {
+      display: inline-block;
+      transition: all 0.1s ease;
+    }
+    .testimonial-card {
+      background: rgba(15,23,42,0.5);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(71,85,105,0.25);
+      transition: all 0.4s ease;
+    }
+    .testimonial-card:hover {
+      border-color: rgba(255,178,0,0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(255,178,0,0.06);
+    }
+    .plan-table th, .plan-table td { padding: 12px 16px; text-align: center; }
+    .plan-table th:first-child, .plan-table td:first-child { text-align: left; }
+    .plan-table tbody tr { border-bottom: 1px solid rgba(71,85,105,0.15); transition: background 0.2s ease; }
+    .plan-table tbody tr:hover { background: rgba(255,178,0,0.03); }
+    @media (max-width: 767px) {
+      .mockup-phone { width: 180px; height: 365px; }
+      .mockup-phone::before { width: 70px; }
+      .mockup-screen { inset: 8px; border-radius: 18px; }
+      .mockup-chat { font-size: 8px; padding: 5px 8px; }
+      .mockup-input { font-size: 7px; padding: 5px 10px; }
+      .plan-table th, .plan-table td { padding: 8px 10px; font-size: 12px; }
+    }
+    #circuit-canvas {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 0; opacity: 0.35;
+    }
+    .toast-container {
+      position: fixed; top: 80px; right: 16px; z-index: 9999;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .toast {
+      padding: 12px 16px; border-radius: 12px;
+      font-size: 13px; font-weight: 500;
+      display: flex; align-items: center; gap: 8px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      animation: toastIn 0.35s ease-out;
+      max-width: 360px;
+    }
+    .toast.success { background: rgba(5,150,105,0.9); border: 1px solid rgba(5,150,105,0.5); color: white; }
+    .toast.error { background: rgba(220,38,38,0.9); border: 1px solid rgba(220,38,38,0.5); color: white; }
+    .toast.info { background: rgba(255,178,0,0.9); border: 1px solid rgba(255,178,0,0.3); color: #040D1A; }
+    @keyframes toastIn { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes toastOut { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(40px); } }
+  </style>
+</head>
+<body class="font-sans text-slate-300 grid-bg faena-mode min-h-screen antialiased">
+
+  <canvas id="circuit-canvas"></canvas>
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="glass fixed top-0 inset-x-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" onclick="navigateTo('inicio'); return false;" class="flex items-center gap-2.5 group">
+          <img src="https://play-lh.googleusercontent.com/kJR3hsfP167tsVfb_aUbRjk_mrxl7NX1WE8ffriSWRYw3dil48aMdP7fQDv-9VEUnloFIQhFN9UgJFnhLcHT=w48-h48-rw" alt="Pliegos RIC Chile" class="w-9 h-9 rounded-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-[0_0_20px_rgba(255,178,0,0.2)]">
+          <span class="font-semibold text-sm sm:text-base text-white tracking-tight">Pliegos <span class="text-sec-DEFAULT">RIC</span> Chile</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-1">
+          <a href="#" data-nav="inicio" class="nav-link px-3 py-2 text-sm font-medium text-slate-400 hover:text-sec-DEFAULT transition-colors duration-200">Inicio</a>
+          <a href="#" data-nav="como-se-usa" class="nav-link px-3 py-2 text-sm font-medium text-slate-400 hover:text-sec-DEFAULT transition-colors duration-200">Cómo se usa</a>
+          <a href="#" data-nav="soporte" class="nav-link px-3 py-2 text-sm font-medium text-slate-400 hover:text-sec-DEFAULT transition-colors duration-200">Soporte</a>
+          <a href="#" data-nav="privacidad" class="nav-link px-3 py-2 text-sm font-medium text-slate-400 hover:text-sec-DEFAULT transition-colors duration-200">Privacidad</a>
+          <a href="#" data-nav="terminos" class="nav-link px-3 py-2 text-sm font-medium text-slate-400 hover:text-sec-DEFAULT transition-colors duration-200">Términos</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-sec-DEFAULT transition-colors" aria-label="Menú">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-abyss/95 backdrop-blur-lg">
+      <div class="px-4 py-3 space-y-1">
+        <a href="#" data-nav="inicio" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-400 hover:text-sec-DEFAULT hover:bg-white/5 transition-all">Inicio</a>
+        <a href="#" data-nav="como-se-usa" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-400 hover:text-sec-DEFAULT hover:bg-white/5 transition-all">Cómo se usa</a>
+        <a href="#" data-nav="soporte" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-400 hover:text-sec-DEFAULT hover:bg-white/5 transition-all">Soporte</a>
+        <a href="#" data-nav="privacidad" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-400 hover:text-sec-DEFAULT hover:bg-white/5 transition-all">Privacidad</a>
+        <a href="#" data-nav="terminos" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-400 hover:text-sec-DEFAULT hover:bg-white/5 transition-all">Términos</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="pt-16">
+
+    <!-- ===== SECCIÓN INICIO ===== -->
+    <section id="page-inicio" class="section-page active">
+
+      <!-- Hero -->
+      <section class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-sec-DEFAULT/5 via-transparent to-transparent pointer-events-none"></div>
+        <div class="absolute top-20 left-1/4 w-96 h-96 bg-sec-DEFAULT/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 right-1/3 w-64 h-64 bg-sec-DEFAULT/3 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-16 sm:pb-24 relative z-10">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="text-center lg:text-left">
+              <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sec-DEFAULT/10 border border-sec-DEFAULT/20 text-sec-DEFAULT text-xs font-semibold uppercase tracking-wider mb-6">
+                <i class="fas fa-star text-[10px]"></i> Versión 2.0 disponible
+              </div>
+              <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-5">
+                <span class="text-gradient">Tu guía técnica eléctrica<br>directo en tu bolsillo</span>
+              </h1>
+              <p class="text-base sm:text-lg md:text-xl text-slate-400 max-w-xl mb-2 font-light">
+                Chao PDFs pesados bajo el sol.
+              </p>
+              <p class="text-sm sm:text-base text-slate-500 max-w-xl mb-8 font-light">
+                La suite definitiva para instaladores autorizados SEC, ingenieros y proyectistas en Chile.
+              </p>
+              <div class="flex flex-col sm:flex-row items-center lg:items-start gap-4">
+                <a href="https://play.google.com/store/apps/details?id=com.chinaski.pliegosric" target="_blank" rel="noopener" class="btn-sec inline-flex items-center gap-3 px-7 py-3.5 rounded-xl text-abyss font-bold text-sm glow-border">
+                  <i class="fab fa-google-play text-lg"></i> Descargar en Google Play
+                </a>
+                <a href="#" class="btn-outline-sec inline-flex items-center gap-3 px-7 py-3.5 rounded-xl text-sec-DEFAULT font-semibold text-sm">
+                  <i class="fab fa-apple text-lg"></i> Pronto en App Store
+                </a>
+              </div>
+              <div class="flex items-center gap-6 mt-5 justify-center lg:justify-start">
+                <div class="text-center">
+                  <div class="counter-value text-2xl sm:text-3xl font-extrabold text-sec-DEFAULT" data-target="1847" data-counted="false">0</div>
+                  <p class="text-xs text-slate-500 mt-0.5">Instaladores activos</p>
+                </div>
+                <div class="text-center">
+                  <div class="counter-value text-2xl sm:text-3xl font-extrabold text-sec-DEFAULT" data-target="12500" data-counted="false">0</div>
+                  <p class="text-xs text-slate-500 mt-0.5">Consultas IA respondidas</p>
+                </div>
+                <div class="text-center">
+                  <div class="counter-value text-2xl sm:text-3xl font-extrabold text-sec-DEFAULT" data-target="36" data-counted="false">0</div>
+                  <p class="text-xs text-slate-500 mt-0.5">Pliegos técnicos</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-600 mt-4">App 100% gratuita · Premium $3.000 CLP/año (Android) · $5.000 CLP/año (iOS)</p>
+            </div>
+            <div class="flex justify-center mt-8 lg:mt-0">
+              <div class="relative" style="width: 260px;">
+                <div class="absolute inset-0 rounded-[32px] bg-gradient-to-b from-sec-DEFAULT/10 to-sec-DEFAULT/5 blur-xl"></div>
+                <div class="relative rounded-[32px] p-2" style="background: linear-gradient(145deg, rgba(255,178,0,0.15), rgba(255,178,0,0.05)); box-shadow: 0 0 40px rgba(255,178,0,0.06), 0 20px 60px rgba(0,0,0,0.4);">
+                  <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-1.5 rounded-full bg-white/10 z-20"></div>
+                  <div class="overflow-hidden rounded-[24px] bg-abyss relative" style="aspect-ratio: 9/19.5;">
+                    <div id="carousel-track" class="flex transition-transform duration-500 ease-out" style="transform: translateX(0);">
+                      <img src="https://play-lh.googleusercontent.com/gso8_hhKCbEpiXhwouc3rsDTpkQyHpxkLoRIEv8gL1YJYZjifqvCVGtorNGpL9OeIptSaUpZLRzptyInI5EEbA=w5120-h2880-rw" alt="App screenshot 1" class="w-full h-full shrink-0" style="object-fit: cover;">
+                      <img src="https://play-lh.googleusercontent.com/tprn7HteL2nyD7i-QfLLBpDfFKhzndzpRJGq0yUfGKfAhGjAUfWCSbFsOksptXj3MzJCTcq8B4-XJgSgwfUaBg=w5120-h2880-rw" alt="App screenshot 2" class="w-full h-full shrink-0" style="object-fit: cover;">
+                      <img src="https://play-lh.googleusercontent.com/DCV9aoiFUUENQP_LtUoiFsOnFoyjsGSmlzjktIGP84SrgtzYU9tvRZGI2_Lxalkpwrki-KRlFYzIaGvwzbHDYw=w5120-h2880-rw" alt="App screenshot 3" class="w-full h-full shrink-0" style="object-fit: cover;">
+                      <img src="https://play-lh.googleusercontent.com/1DEGozrtCy-tJ1aALJN_ZwMZ6JzczQhVQQZ142Eaa8g62Ky7e4NGIx-swHO45o4hfIoONzzqgJD6R4qCow13_Q=w5120-h2880-rw" alt="App screenshot 4" class="w-full h-full shrink-0" style="object-fit: cover;">
+                      <img src="https://play-lh.googleusercontent.com/FqtknmdkVXv2MdRLtOSE9wctZEXKjN4cH2eFx32iRecy7ibtcJhibCsvW2rz_nRm00EIXUwiMJg3tMd0jdyKxVM=w5120-h2880-rw" alt="App screenshot 5" class="w-full h-full shrink-0" style="object-fit: cover;">
+                    </div>
+                    <button id="carousel-prev" class="absolute left-1.5 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-black/50 text-white flex items-center justify-center text-xs border-0 cursor-pointer hover:bg-black/70 hover:scale-110 transition-all opacity-0 group-hover:opacity-100 backdrop-blur-sm" style="opacity: 0.6;"><i class="fas fa-chevron-left"></i></button>
+                    <button id="carousel-next" class="absolute right-1.5 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-black/50 text-white flex items-center justify-center text-xs border-0 cursor-pointer hover:bg-black/70 hover:scale-110 transition-all backdrop-blur-sm" style="opacity: 0.6;"><i class="fas fa-chevron-right"></i></button>
+                  </div>
+                </div>
+                <div class="flex justify-center gap-2 mt-4">
+                  <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-sec-DEFAULT border-0 cursor-pointer transition-all duration-300 active" data-index="0"></button>
+                  <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-slate-600 border-0 cursor-pointer transition-all duration-300" data-index="1"></button>
+                  <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-slate-600 border-0 cursor-pointer transition-all duration-300" data-index="2"></button>
+                  <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-slate-600 border-0 cursor-pointer transition-all duration-300" data-index="3"></button>
+                  <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-slate-600 border-0 cursor-pointer transition-all duration-300" data-index="4"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Características V2.0 -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24">
+        <div class="text-center mb-14">
+          <span class="text-sec-DEFAULT font-semibold text-xs uppercase tracking-[0.2em]">Funcionalidades</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-3">Todo lo que necesitas en <span class="text-sec-DEFAULT">V2.0</span></h2>
+          <div class="w-16 h-0.5 bg-sec-DEFAULT/40 mx-auto mt-4 rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <div class="card-glass rounded-2xl p-6">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-11 h-11 rounded-xl bg-sec-DEFAULT/10 border border-sec-DEFAULT/20 flex items-center justify-center">
+                <i class="fas fa-book-open text-sec-DEFAULT text-lg"></i>
+              </div>
+              <span class="badge-tech"><i class="fas fa-check-circle" style="font-size:7px;"></i> Norma SEC Vigente</span>
+            </div>
+            <h3 class="text-white font-semibold text-lg mb-2">Normativa Completa</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Acceso rápido a los <strong class="text-slate-200">19 Pliegos RIC</strong> (Consumo) y <strong class="text-slate-200">16 Pliegos RPTD</strong> (Distribución).</p>
+          </div>
+
+          <div class="card-glass rounded-2xl p-6">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-11 h-11 rounded-xl bg-sec-DEFAULT/10 border border-sec-DEFAULT/20 flex items-center justify-center">
+                <i class="fas fa-robot text-sec-DEFAULT text-lg"></i>
+              </div>
+              <span class="badge-tech"><i class="fas fa-brain" style="font-size:7px;"></i> IA RAG</span>
+            </div>
+            <h3 class="text-white font-semibold text-lg mb-2">Asistente IA Eléctrico (RAG)</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Chat inteligente entrenado con la norma SEC. Responde con precisión quirúrgica y abre el artículo del PDF al instante.</p>
+          </div>
+
+          <div class="card-glass rounded-2xl p-6">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-11 h-11 rounded-xl bg-sec-DEFAULT/10 border border-sec-DEFAULT/20 flex items-center justify-center">
+                <i class="fas fa-calculator text-sec-DEFAULT text-lg"></i>
+              </div>
+              <span class="badge-tech"><i class="fas fa-wifi-slash" style="font-size:7px;"></i> Cálculo Offline</span>
+            </div>
+            <h3 class="text-white font-semibold text-lg mb-2">Calculadoras de Terreno</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Caída de Tensión, Impedancia de Bucle (Z), Ampacidad de cables y dimensionamiento de motores/baterías.</p>
+          </div>
+
+          <div class="card-glass rounded-2xl p-6">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-11 h-11 rounded-xl bg-sec-DEFAULT/10 border border-sec-DEFAULT/20 flex items-center justify-center">
+                <i class="fas fa-tools text-sec-DEFAULT text-lg"></i>
+              </div>
+              <span class="badge-tech"><i class="fas fa-bolt" style="font-size:7px;"></i> Utilidades</span>
+            </div>
+            <h3 class="text-white font-semibold text-lg mb-2">Utilidades Avanzadas</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Conversor AWG ↔ mm², códigos de colores de conductores y grados de protección IP/IK.</p>
+          </div>
+
+          <div class="card-glass rounded-2xl p-6">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-11 h-11 rounded-xl bg-sec-DEFAULT/10 border border-sec-DEFAULT/20 flex items-center justify-center">
+                <i class="fas fa-table-cells text-sec-DEFAULT text-lg"></i>
+              </div>
+              <span class="badge-tech"><i class="fas fa-ruler" style="font-size:7px;"></i> DIN</span>
+            </div>
+            <h3 class="text-white font-semibold text-lg mb-2">Cubicador de Tableros DIN</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Calcula módulos, sugiere gabinete respetando el 25% de reserva legal.</p>
+          </div>
+
+          <div class="card-glass rounded-2xl p-6">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-11 h-11 rounded-xl bg-sec-DEFAULT/10 border border-sec-DEFAULT/20 flex items-center justify-center">
+                <i class="fas fa-file-lines text-sec-DEFAULT text-lg"></i>
+              </div>
+              <span class="badge-tech"><i class="fas fa-file-export" style="font-size:7px;"></i> Pre-TE1</span>
+            </div>
+            <h3 class="text-white font-semibold text-lg mb-2">Generador Pre-TE1</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Formulario que compila datos listos para copiar y pegar en el trámite digital de la SEC.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Testimonios → Reseñas reales de Google Play -->
+      <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24">
+        <div class="text-center mb-12">
+          <span class="text-sec-DEFAULT font-semibold text-xs uppercase tracking-[0.2em]">Reseñas</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-3">Lo que dicen en <span class="text-sec-DEFAULT">Google Play</span></h2>
+          <div class="flex items-center justify-center gap-2 mt-2">
+            <span class="text-sec-DEFAULT text-lg font-bold">4.8</span>
+            <div class="flex gap-0.5">
+              <i class="fas fa-star text-sec-DEFAULT text-sm"></i>
+              <i class="fas fa-star text-sec-DEFAULT text-sm"></i>
+              <i class="fas fa-star text-sec-DEFAULT text-sm"></i>
+              <i class="fas fa-star text-sec-DEFAULT text-sm"></i>
+              <i class="fas fa-star text-sec-DEFAULT text-sm"></i>
+            </div>
+            <span class="text-slate-500 text-sm">• 11 opiniones</span>
+          </div>
+          <div class="w-16 h-0.5 bg-sec-DEFAULT/40 mx-auto mt-4 rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="testimonial-card rounded-2xl p-6">
+            <div class="flex items-center gap-1 mb-3">
+              <i class="fas fa-star text-sec-DEFAULT text-xs"></i>
+              <i class="fas fa-star text-sec-DEFAULT text-xs"></i>
+              <i class="fas fa-star text-sec-DEFAULT text-xs"></i>
+              <i class="fas fa-star text-sec-DEFAULT text-xs"></i>
+              <i class="fas fa-star text-sec-DEFAULT text-xs"></i>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">"Super útil para dimensionar rápido y verificar caídas de tensión antes de tirar las líneas. Una app pensada 100% en la realidad."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-sec-DEFAULT/10 border border-sec-DEFAULT/20 flex items-center justify-center text-sec-DEFAULT font-bold text-xs">LS</div>
+              <div>
+                <p class="text-white text-sm font-medium">Luis Silva Saavedra</p>
+                <p class="text-slate-500 text-xs">25 de mayo de 2026</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card rounded-2xl p-6">
+            <div class="flex items-center gap-1 mb-3">
+              <i class="fas fa-star text-sec-DEFAULT text-xs"></i>
+              <i class="fas fa-star text-sec-DEFAULT text-xs"></i>
+              <i class="fas fa-star text-sec-DEFAULT text-xs"></i>
+              <i class="fas fa-star text-sec-DEFAULT text-xs"></i>
+              <i class="fas fa-star text-sec-DEFAULT text-xs"></i>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">"Excelente aplicación, cada vez más completa y muy útil para el rubro. Se agradece al desarrollador. Los $3.000 de la suscripción valen mucho la pena. ¡Sigan así!"</p>
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-sec-DEFAULT/10 border border-sec-DEFAULT/20 flex items-center justify-center text-sec-DEFAULT font-bold text-xs">MS</div>
+              <div>
+                <p class="text-white text-sm font-medium">Matías Silva Silva Gonzalez</p>
+                <p class="text-slate-500 text-xs">31 de mayo de 2026</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card rounded-2xl p-6">
+            <div class="flex items-center gap-1 mb-3">
+              <i class="fas fa-star text-sec-DEFAULT text-xs"></i>
+              <i class="fas fa-star text-sec-DEFAULT text-xs"></i>
+              <i class="fas fa-star text-sec-DEFAULT text-xs"></i>
+              <i class="fas fa-star text-sec-DEFAULT text-xs"></i>
+              <i class="fas fa-star text-sec-DEFAULT text-xs"></i>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">"Ahora la IA enlaza al artículo exacto del PDF, se puede copiar el texto del chat y las respuestas son precisas. Gran actualización. Súper recomendada para instaladores."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-sec-DEFAULT/10 border border-sec-DEFAULT/20 flex items-center justify-center text-sec-DEFAULT font-bold text-xs">PR</div>
+              <div>
+                <p class="text-white text-sm font-medium">Pedro Rojas</p>
+                <p class="text-slate-500 text-xs">1 de junio de 2026</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-6">
+          <a href="https://play.google.com/store/apps/details?id=com.chinaski.pliegosric&hl=es_CL&gl=CL#reviews" target="_blank" rel="noopener" class="btn-outline-sec inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sec-DEFAULT font-medium text-sm">
+            <i class="fab fa-google-play"></i> Ver todas las reseñas en Google Play
+          </a>
+        </div>
+      </section>
+
+      <!-- Tabla comparativa de planes -->
+      <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24">
+        <div class="text-center mb-10">
+          <span class="text-sec-DEFAULT font-semibold text-xs uppercase tracking-[0.2em]">Planes</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-3">Gratuito vs <span class="text-sec-DEFAULT">Premium</span></h2>
+          <div class="w-16 h-0.5 bg-sec-DEFAULT/40 mx-auto mt-4 rounded-full"></div>
+        </div>
+        <div class="card-glass rounded-2xl overflow-hidden">
+          <table class="plan-table w-full text-sm">
+            <thead>
+              <tr class="border-b border-white/5">
+                <th class="text-slate-300 font-semibold">Funcionalidad</th>
+                <th class="text-slate-300 font-semibold"><i class="fas fa-user text-sec-DEFAULT mr-1"></i> Gratuito</th>
+                <th class="text-sec-DEFAULT font-semibold"><i class="fas fa-crown mr-1"></i> Premium</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="text-slate-300">Calculadoras técnicas</td><td><i class="fas fa-check text-green-500"></i></td><td><i class="fas fa-check text-green-500"></i></td></tr>
+              <tr><td class="text-slate-300">Normativa SEC completa</td><td><i class="fas fa-check text-green-500"></i></td><td><i class="fas fa-check text-green-500"></i></td></tr>
+              <tr><td class="text-slate-300">Utilidades AWG / IP / IK</td><td><i class="fas fa-check text-green-500"></i></td><td><i class="fas fa-check text-green-500"></i></td></tr>
+              <tr><td class="text-slate-300">Cubicador de tableros DIN</td><td><i class="fas fa-check text-green-500"></i></td><td><i class="fas fa-check text-green-500"></i></td></tr>
+              <tr><td class="text-slate-300">Generador Pre-TE1</td><td><i class="fas fa-check text-green-500"></i></td><td><i class="fas fa-check text-green-500"></i></td></tr>
+              <tr><td class="text-slate-300">Asistente IA (consultas/día)</td><td><span class="text-slate-400">5 consultas</span></td><td><i class="fas fa-infinity text-sec-DEFAULT"></i> Ilimitado</td></tr>
+              <tr><td class="text-slate-300">Sin publicidad</td><td><i class="fas fa-times text-red-400"></i></td><td><i class="fas fa-check text-green-500"></i></td></tr>
+              <tr><td class="text-slate-300">Soporte prioritario</td><td><i class="fas fa-times text-red-400"></i></td><td><i class="fas fa-check text-green-500"></i></td></tr>
+              <tr><td class="text-slate-300">Precio</td><td class="text-slate-400 font-medium">$0</td><td class="text-sec-DEFAULT font-bold">$3.000 / $5.000 año</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Monetización -->
+      <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24">
+        <div class="card-glass rounded-3xl p-8 sm:p-12 glow-border">
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div>
+              <span class="text-sec-DEFAULT font-semibold text-xs uppercase tracking-[0.2em]">Modelo de Monetización</span>
+              <h2 class="text-2xl sm:text-3xl font-bold text-white mt-2 mb-4">100% gratuita, <span class="text-sec-DEFAULT">sin trampas</span></h2>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Descarga y usa todas las herramientas técnicas sin pagar un peso. La app se financia con anuncios no invasivos (banners y videos recompensados para recargar consultas IA).
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-sec-DEFAULT mt-0.5 text-sm"></i>
+                  <span class="text-slate-300 text-sm"><strong class="text-white">Gratuito:</strong> Acceso a todas las calculadoras, normativa y utilidades. Anuncios ocasionales.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-sec-DEFAULT mt-0.5 text-sm"></i>
+                  <span class="text-slate-300 text-sm"><strong class="text-white">Premium:</strong> Sin publicidad, IA sin límites de consultas, y funciones exclusivas. <span class="text-sec-DEFAULT">$3.000 CLP/año</span> Android · <span class="text-sec-DEFAULT">$5.000 CLP/año</span> iOS</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-glass rounded-2xl p-6 sm:p-8 text-center">
+              <div class="w-16 h-16 rounded-full bg-sec-DEFAULT/10 border border-sec-DEFAULT/20 flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-crown text-2xl text-sec-DEFAULT"></i>
+              </div>
+              <h3 class="text-white font-bold text-xl mb-1">Premium</h3>
+              <div class="flex flex-col items-center gap-3 mb-4">
+                <div class="flex items-baseline gap-1.5">
+                  <span class="text-xs text-slate-400 font-medium">Android</span>
+                  <span class="text-3xl font-extrabold text-sec-DEFAULT">$3.000</span>
+                  <span class="text-slate-400 text-sm">/año</span>
+                </div>
+                <div class="flex items-baseline gap-1.5">
+                  <span class="text-xs text-slate-400 font-medium">iOS</span>
+                  <span class="text-3xl font-extrabold text-sec-DEFAULT">$5.000</span>
+                  <span class="text-slate-400 text-sm">/año</span>
+                </div>
+              </div>
+              <ul class="text-left space-y-2 mb-6 text-sm text-slate-300">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-sec-DEFAULT text-xs"></i> Sin publicidad</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-sec-DEFAULT text-xs"></i> IA ilimitada</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-sec-DEFAULT text-xs"></i> Prioridad en soporte</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- ===== SECCIÓN CÓMO SE USA ===== -->
+    <section id="page-como-se-usa" class="section-page">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+        <div class="text-center mb-14">
+          <span class="text-sec-DEFAULT font-semibold text-xs uppercase tracking-[0.2em]">Guía técnica</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-3">Circuito de uso <span class="text-sec-DEFAULT">en terreno</span></h2>
+          <div class="w-16 h-0.5 bg-sec-DEFAULT/40 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-0">
+          <div class="relative step-wrapper pl-16 pb-8">
+            <div class="tech-step-dot">1</div>
+            <div class="card-glass rounded-2xl p-5 sm:p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <i class="fas fa-download text-sec-DEFAULT text-sm"></i>
+                <h3 class="text-white font-semibold text-base">Descarga e instalación</h3>
+              </div>
+              <p class="text-slate-400 text-sm">Ve a Google Play Store, descarga <strong class="text-slate-200">Pliegos RIC Chile</strong> gratis. En segundos estarás dentro.</p>
+            </div>
+          </div>
+
+          <div class="relative step-wrapper pl-16 pb-8">
+            <div class="tech-step-dot">2</div>
+            <div class="card-glass rounded-2xl p-5 sm:p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <i class="fas fa-user-cog text-sec-DEFAULT text-sm"></i>
+                <h3 class="text-white font-semibold text-base">Configura tu perfil SEC</h3>
+              </div>
+              <p class="text-slate-400 text-sm">Regístrate con tu correo o Google. Selecciona tu clase SEC (Instalador A, B, C, D o Ingeniero) y ajusta preferencias.</p>
+            </div>
+          </div>
+
+          <div class="relative step-wrapper pl-16 pb-8">
+            <div class="tech-step-dot">3</div>
+            <div class="card-glass rounded-2xl p-5 sm:p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <i class="fas fa-wifi-slash text-sec-DEFAULT text-sm"></i>
+                <h3 class="text-white font-semibold text-base">Trabaja sin conexión</h3>
+              </div>
+              <p class="text-slate-400 text-sm">Todas las calculadoras y la normativa completa funcionan <strong class="text-slate-200">sin conexión a internet</strong>. Perfecto para subterráneos, faenas mineras o zonas sin cobertura.</p>
+            </div>
+          </div>
+
+          <div class="relative step-wrapper pl-16 pb-8">
+            <div class="tech-step-dot">4</div>
+            <div class="card-glass rounded-2xl p-5 sm:p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <i class="fas fa-robot text-sec-DEFAULT text-sm"></i>
+                <h3 class="text-white font-semibold text-base">Consulta a la IA Eléctrica</h3>
+              </div>
+              <p class="text-slate-400 text-sm">¿Necesitas interpretar una norma? Pregúntale al Asistente IA. Usuario gratuito: mira un breve video para recargar <strong class="text-slate-200">+3 consultas extra</strong>. Premium: usarlo sin límites.</p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="badge-tech"><i class="fas fa-ad"></i> Video AdMob = +3 consultas</span>
+                <span class="badge-tech"><i class="fas fa-crown"></i> Premium = Ilimitado</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative step-wrapper pl-16">
+            <div class="tech-step-dot">5</div>
+            <div class="card-glass rounded-2xl p-5 sm:p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <i class="fas fa-file-signature text-sec-DEFAULT text-sm"></i>
+                <h3 class="text-white font-semibold text-base">Genera tu Pre-TE1 y finaliza</h3>
+              </div>
+              <p class="text-slate-400 text-sm">Compila los datos de tu proyecto y genera el formulario Pre-TE1 listo para copiar y pegar en el trámite digital de la SEC.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN SOPORTE ===== -->
+    <section id="page-soporte" class="section-page">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+        <div class="text-center mb-14">
+          <span class="text-sec-DEFAULT font-semibold text-xs uppercase tracking-[0.2em]">Contacto</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-3">Soporte y <span class="text-sec-DEFAULT">Contacto</span></h2>
+          <div class="w-16 h-0.5 bg-sec-DEFAULT/40 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-5 gap-8 mb-16">
+          <div class="lg:col-span-3 card-glass rounded-2xl p-6 sm:p-8">
+            <form id="contact-form" onsubmit="handleContactForm(event)" class="space-y-5">
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-slate-300 text-sm font-medium mb-1.5">Nombre completo</label>
+                  <input type="text" id="contact-name" required class="w-full bg-slate-900/60 border border-slate-700/50 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-500 outline-none focus:border-sec-DEFAULT/50 focus:shadow-[0_0_0_3px_rgba(255,178,0,0.06)] transition-all" placeholder="Tu nombre">
+                </div>
+                <div>
+                  <label class="block text-slate-300 text-sm font-medium mb-1.5">Correo electrónico</label>
+                  <input type="email" id="contact-email" required class="w-full bg-slate-900/60 border border-slate-700/50 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-500 outline-none focus:border-sec-DEFAULT/50 focus:shadow-[0_0_0_3px_rgba(255,178,0,0.06)] transition-all" placeholder="correo@ejemplo.cl">
+                </div>
+              </div>
+              <div>
+                <label class="block text-slate-300 text-sm font-medium mb-1.5">Tipo de consulta</label>
+                <select id="contact-type" class="w-full bg-slate-900/60 border border-slate-700/50 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-sec-DEFAULT/50 transition-all">
+                  <option value="error" class="bg-abyss">Reporte de error</option>
+                  <option value="sugerencia" class="bg-abyss">Sugerencia de calculadora</option>
+                  <option value="pago" class="bg-abyss">Problema con pago Premium</option>
+                  <option value="alianza" class="bg-abyss">Alianzas comerciales</option>
+                  <option value="otro" class="bg-abyss">Otro</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-slate-300 text-sm font-medium mb-1.5">Mensaje</label>
+                <textarea id="contact-message" rows="4" required class="w-full bg-slate-900/60 border border-slate-700/50 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-500 outline-none focus:border-sec-DEFAULT/50 focus:shadow-[0_0_0_3px_rgba(255,178,0,0.06)] transition-all resize-none" placeholder="Escribe tu mensaje..."></textarea>
+              </div>
+              <button type="submit" class="btn-sec inline-flex items-center gap-2 px-6 py-3 rounded-xl text-abyss font-semibold text-sm">
+                <i class="fas fa-paper-plane text-xs"></i> Enviar mensaje
+              </button>
+            </form>
+          </div>
+
+          <div class="lg:col-span-2 space-y-5">
+            <div class="card-glass rounded-2xl p-6">
+              <div class="flex items-start gap-3 mb-4">
+                <div class="w-10 h-10 rounded-xl bg-sec-DEFAULT/10 border border-sec-DEFAULT/20 flex items-center justify-center shrink-0">
+                  <i class="fas fa-user-tie text-sec-DEFAULT"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold text-sm">Desarrollador</h4>
+                  <p class="text-slate-400 text-sm">Aselec Corporation</p>
+                  <p class="text-slate-500 text-xs">Aselec Corporation</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-xl bg-sec-DEFAULT/10 border border-sec-DEFAULT/20 flex items-center justify-center shrink-0">
+                  <i class="fas fa-envelope text-sec-DEFAULT"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold text-sm">Correo oficial</h4>
+                  <a href="mailto:aselec.eirl@gmail.com" class="text-sec-DEFAULT text-sm hover:underline">aselec.eirl@gmail.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="max-w-3xl mx-auto">
+          <div class="text-center mb-8">
+            <span class="text-sec-DEFAULT font-semibold text-xs uppercase tracking-[0.2em]">FAQ</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">Preguntas Frecuentes</h3>
+          </div>
+
+          <div class="card-glass rounded-2xl mb-3 overflow-hidden">
+            <button class="flex items-center justify-between w-full px-5 sm:px-6 py-4 text-left text-white font-medium text-sm hover:bg-white/[0.02] transition-colors" onclick="toggleAccordion(this)">
+              <span>¿Los cálculos están basados en la norma chilena vigente?</span>
+              <i class="fas fa-chevron-down text-sec-DEFAULT text-xs transition-transform duration-300" style="transform:rotate(0deg);"></i>
+            </button>
+            <div class="legal-accordion-content px-5 sm:px-6 text-slate-400 text-sm leading-relaxed">
+              <div class="pb-4">
+                Sí. Todas las calculadoras y utilidades se basan exclusivamente en la normativa eléctrica chilena: los Pliegos Técnicos RIC (Reglamento de Instalaciones de Consumo) y RPTD (Reglamento de Instalaciones de Distribución) emitidos por la Superintendencia de Electricidad y Combustibles (SEC). Nos actualizamos con cada nueva versión publicada.
+              </div>
+            </div>
+          </div>
+
+          <div class="card-glass rounded-2xl mb-3 overflow-hidden">
+            <button class="flex items-center justify-between w-full px-5 sm:px-6 py-4 text-left text-white font-medium text-sm hover:bg-white/[0.02] transition-colors" onclick="toggleAccordion(this)">
+              <span>¿La app funciona en subterráneos o faenas sin internet?</span>
+              <i class="fas fa-chevron-down text-sec-DEFAULT text-xs transition-transform duration-300"></i>
+            </button>
+            <div class="legal-accordion-content px-5 sm:px-6 text-slate-400 text-sm leading-relaxed">
+              <div class="pb-4">
+                ¡Sí! Todas las calculadoras técnicas, la normativa completa y las utilidades avanzadas funcionan offline. Una vez que descargas los pliegos y los datos iniciales, puedes usar la app sin conexión. Solo el Asistente IA y los anuncios recompensados requieren internet.
+              </div>
+            </div>
+          </div>
+
+          <div class="card-glass rounded-2xl mb-3 overflow-hidden">
+            <button class="flex items-center justify-between w-full px-5 sm:px-6 py-4 text-left text-white font-medium text-sm hover:bg-white/[0.02] transition-colors" onclick="toggleAccordion(this)">
+              <span>¿Cómo restauro mi compra Premium si cambio de teléfono?</span>
+              <i class="fas fa-chevron-down text-sec-DEFAULT text-xs transition-transform duration-300"></i>
+            </button>
+            <div class="legal-accordion-content px-5 sm:px-6 text-slate-400 text-sm leading-relaxed">
+              <div class="pb-4">
+                Tu suscripción Premium está vinculada a tu cuenta de Google Play (o a tu correo electrónico si te registraste manualmente). Solo inicia sesión con la misma cuenta en tu nuevo dispositivo y la suscripción se restaurará automáticamente. Si tienes problemas, escríbenos a aselec.eirl@gmail.com y te ayudamos al instante.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN PRIVACIDAD ===== -->
+    <section id="page-privacidad" class="section-page">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+        <div class="text-center mb-10">
+          <span class="text-sec-DEFAULT font-semibold text-xs uppercase tracking-[0.2em]">Legal</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-2">Políticas de <span class="text-sec-DEFAULT">Privacidad</span></h2>
+          <div class="w-16 h-0.5 bg-sec-DEFAULT/40 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="card-glass rounded-2xl overflow-hidden">
+          <div class="px-6 sm:px-10 py-5 border-b border-white/5">
+            <p class="text-slate-500 text-xs">Última actualización: Junio 2025</p>
+          </div>
+
+          <button class="flex items-center justify-between w-full px-6 sm:px-10 py-4 text-left text-white font-semibold text-sm hover:bg-white/[0.02] transition-colors" onclick="toggleLegalAccordion(this, 'privacidad-all')">
+            <span>Políticas de Privacidad <span class="text-sec-DEFAULT font-normal">(completo)</span></span>
+            <i class="fas fa-chevron-down text-sec-DEFAULT text-xs transition-transform duration-300"></i>
+          </button>
+          <div class="legal-accordion-content px-6 sm:px-10 text-slate-300 text-sm leading-relaxed space-y-5" id="privacidad-all">
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">1. Quiénes somos</h3>
+              <p><strong class="text-slate-200">Pliegos RIC Chile</strong> es una aplicación móvil desarrollada por <strong class="text-slate-200">Aselec Corporation</strong>. Esta política explica cómo recopilamos, usamos y protegemos tu información.</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">2. Información que recopilamos</h3>
+              <p>Para brindarte una experiencia personalizada y segura, utilizamos <strong class="text-slate-200">Firebase Authentication</strong> para el registro y la autenticación de cuentas. Esto puede incluir tu dirección de correo electrónico, nombre y una contraseña cifrada, o bien los datos de tu cuenta de Google si optas por iniciar sesión con ese método.</p>
+              <p class="mt-2">Adicionalmente, recopilamos datos anónimos de uso y rendimiento para mejorar la aplicación (por ejemplo, qué calculadoras usas con más frecuencia).</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">3. Servicios de terceros</h3>
+              <p>Nuestra app integra los siguientes servicios de terceros para su funcionamiento:</p>
+              <ul class="list-disc list-inside space-y-1 text-slate-400 mt-2">
+                <li><strong class="text-slate-200">Google AdMob</strong> — Para la entrega de anuncios banners y videos recompensados. AdMob puede recopilar identificadores publicitarios anónimos para mostrar anuncios relevantes. Puedes gestionar la personalización de anuncios desde los ajustes de tu dispositivo.</li>
+                <li><strong class="text-slate-200">RevenueCat</strong> — Para la gestión segura de transacciones y suscripciones dentro de la app. RevenueCat procesa los pagos a través de las tiendas oficiales (Google Play) y no almacena datos sensibles de tarjetas de crédito.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">4. Uso de la información</h3>
+              <p>Usamos tus datos para:</p>
+              <ul class="list-disc list-inside space-y-1 text-slate-400 mt-2">
+                <li>Crear y gestionar tu cuenta de usuario.</li>
+                <li>Sincronizar tus preferencias y suscripciones entre dispositivos.</li>
+                <li>Brindarte soporte técnico y responder tus consultas.</li>
+                <li>Mejorar la app con base en patrones de uso anónimos.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">5. Derechos del usuario y retención de datos</h3>
+              <p>Respetamos tu privacidad. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición (ARCO) en cualquier momento. Tus datos se conservarán mientras mantengas tu cuenta activa. Si eliminas tu cuenta, todos tus datos personales se borrarán de nuestros servidores en un plazo máximo de 30 días.</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">6. Eliminación de la cuenta</h3>
+              <p>Puedes eliminar tu cuenta y todos tus datos asociados de forma autónoma desde el menú de <strong class="text-slate-200">Ajustes</strong> dentro de la aplicación, opción "Eliminar cuenta". Este proceso es irreversible y borrará permanentemente tu perfil, preferencias y datos de autenticación de Firebase.</p>
+              <p class="mt-2">Si tienes problemas con la eliminación autónoma, contáctanos a <a href="mailto:aselec.eirl@gmail.com" class="text-sec-DEFAULT hover:underline">aselec.eirl@gmail.com</a> y lo gestionaremos manualmente.</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">7. Contacto</h3>
+              <p>Para cualquier consulta sobre esta política, escríbenos a <a href="mailto:aselec.eirl@gmail.com" class="text-sec-DEFAULT hover:underline">aselec.eirl@gmail.com</a> o dirígete a la sección de Soporte y Contacto de este sitio.</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">8. Cambios a esta política</h3>
+              <p>Nos reservamos el derecho de actualizar esta política de privacidad. Cualquier cambio será notificado a través de la aplicación y, cuando sea materialmente relevante, mediante correo electrónico a los usuarios registrados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN TÉRMINOS ===== -->
+    <section id="page-terminos" class="section-page">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+        <div class="text-center mb-10">
+          <span class="text-sec-DEFAULT font-semibold text-xs uppercase tracking-[0.2em]">Legal</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-2">Términos y <span class="text-sec-DEFAULT">Condiciones</span></h2>
+          <div class="w-16 h-0.5 bg-sec-DEFAULT/40 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="card-glass rounded-2xl overflow-hidden">
+          <div class="px-6 sm:px-10 py-5 border-b border-white/5">
+            <p class="text-slate-500 text-xs">Última actualización: Junio 2025</p>
+          </div>
+
+          <button class="flex items-center justify-between w-full px-6 sm:px-10 py-4 text-left text-white font-semibold text-sm hover:bg-white/[0.02] transition-colors" onclick="toggleLegalAccordion(this, 'terminos-all')">
+            <span>Términos y Condiciones <span class="text-sec-DEFAULT font-normal">(completo)</span></span>
+            <i class="fas fa-chevron-down text-sec-DEFAULT text-xs transition-transform duration-300"></i>
+          </button>
+          <div class="legal-accordion-content px-6 sm:px-10 text-slate-300 text-sm leading-relaxed space-y-5" id="terminos-all">
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">1. Aceptación de los términos</h3>
+              <p>Al descargar, instalar o usar la aplicación <strong class="text-slate-200">Pliegos RIC Chile</strong>, aceptas los presentes Términos y Condiciones. Si no estás de acuerdo con alguna parte de estos términos, no debes usar la aplicación.</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">2. Descripción del servicio</h3>
+              <p>Pliegos RIC Chile es una suite técnica integral diseñada para instaladores autorizados SEC, ingenieros eléctricos y proyectistas. Incluye calculadoras técnicas, acceso a normativa SEC, un asistente con inteligencia artificial, utilidades de conversión y herramientas de gestión de proyectos.</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">3. Cuentas de usuario y seguridad</h3>
+              <p>Eres responsable de mantener la confidencialidad de las credenciales de tu cuenta. No debes compartir tu cuenta ni permitir que terceros accedan a ella. Notifícanos inmediatamente cualquier uso no autorizado a <a href="mailto:aselec.eirl@gmail.com" class="text-sec-DEFAULT hover:underline">aselec.eirl@gmail.com</a>.</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">4. Suscripciones y pagos</h3>
+              <p>La aplicación es gratuita con publicidad. El plan <strong class="text-slate-200">Premium</strong> tiene un valor de <strong class="text-slate-200">$3.000 CLP/año en Android</strong> y <strong class="text-slate-200">$5.000 CLP/año en iOS</strong> (precio sujeto a cambios con aviso previo). Todos los pagos son procesados exclusivamente a través de <strong class="text-slate-200">RevenueCat</strong> y las tiendas oficiales (Google Play / App Store). Las suscripciones se renuevan automáticamente a menos que se cancelen al menos 24 horas antes del final del período vigente.</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">5. Eliminación de cuenta</h3>
+              <p>Puedes eliminar tu cuenta y todos tus datos asociados de forma autónoma desde el menú de <strong class="text-slate-200">Ajustes → Eliminar cuenta</strong> dentro de la aplicación. Este proceso es irreversible.</p>
+            </div>
+            <div>
+              <div class="disclaimer-card rounded-xl p-4 sm:p-5 my-4">
+                <div class="flex items-start gap-3">
+                  <i class="fas fa-triangle-exclamation text-sec-DEFAULT mt-0.5 shrink-0"></i>
+                  <div>
+                    <h3 class="text-white font-semibold text-base mb-2">6. Deslinde de Responsabilidad Técnica (Disclaimer)</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                      Las calculadoras técnicas integradas, las utilidades de conversión y las respuestas proporcionadas por el Asistente IA son <strong class="text-white">herramientas digitales de asistencia, optimización y apoyo</strong> para el trabajo en terreno. Bajo ninguna circunstancia reemplazan el <strong class="text-white">criterio profesional de ingeniería</strong> ni los métodos de validación oficiales. La firma, diseño, ejecución y validación final de cualquier proyecto técnico eléctrico ante la Superintendencia de Electricidad y Combustibles (SEC) es responsabilidad <strong class="text-white">estricta y exclusiva</strong> del instalador autorizado o profesional a cargo de la obra.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">7. Propiedad intelectual</h3>
+              <p>Todos los derechos de propiedad intelectual de la aplicación, incluyendo su código, diseño, logotipos y contenido original, pertenecen a <strong class="text-slate-200">Aselec Corporation</strong>. La normativa SEC incluida es propiedad de la Superintendencia de Electricidad y Combustibles de Chile y se presenta con fines de consulta técnica.</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">8. Limitación de responsabilidad</h3>
+              <p>En ningún caso Aselec Corporation será responsable por daños directos, indirectos, incidentales o consecuentes derivados del uso o la imposibilidad de uso de la aplicación, incluyendo errores en cálculos técnicos realizados por el usuario basados en las herramientas proporcionadas.</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">9. Modificaciones</h3>
+              <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios entrarán en vigor inmediatamente después de su publicación en la aplicación. El uso continuado de la app después de cualquier modificación constituye tu aceptación de los nuevos términos.</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">10. Contacto legal</h3>
+              <p>Para asuntos legales o notificaciones formales, contacta a: <a href="mailto:aselec.eirl@gmail.com" class="text-sec-DEFAULT hover:underline">aselec.eirl@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="border-t border-white/5 bg-abyss/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2.5 mb-3">
+            <img src="https://play-lh.googleusercontent.com/kJR3hsfP167tsVfb_aUbRjk_mrxl7NX1WE8ffriSWRYw3dil48aMdP7fQDv-9VEUnloFIQhFN9UgJFnhLcHT=w48-h48-rw" alt="Pliegos RIC Chile" class="w-8 h-8 rounded-lg">
+            <span class="font-semibold text-sm text-white">Pliegos <span class="text-sec-DEFAULT">RIC</span> Chile</span>
+          </div>
+          <p class="text-slate-500 text-xs leading-relaxed">Tu guía técnica eléctrica directo en tu bolsillo.</p>
+          <p class="text-slate-600 text-xs mt-1">© 2025 Aselec Corporation</p>
+        </div>
+        <div>
+          <h4 class="text-white text-xs font-semibold uppercase tracking-wider mb-3">Navegación</h4>
+          <ul class="space-y-2">
+            <li><a href="#" onclick="navigateTo('inicio'); return false;" class="text-slate-400 text-sm hover:text-sec-DEFAULT transition-colors">Inicio</a></li>
+            <li><a href="#" onclick="navigateTo('como-se-usa'); return false;" class="text-slate-400 text-sm hover:text-sec-DEFAULT transition-colors">Cómo se usa</a></li>
+            <li><a href="#" onclick="navigateTo('soporte'); return false;" class="text-slate-400 text-sm hover:text-sec-DEFAULT transition-colors">Soporte</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white text-xs font-semibold uppercase tracking-wider mb-3">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="#" onclick="navigateTo('privacidad'); return false;" class="text-slate-400 text-sm hover:text-sec-DEFAULT transition-colors">Políticas de Privacidad</a></li>
+            <li><a href="#" onclick="navigateTo('terminos'); return false;" class="text-slate-400 text-sm hover:text-sec-DEFAULT transition-colors">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white text-xs font-semibold uppercase tracking-wider mb-3">Descarga</h4>
+          <div class="flex flex-col gap-2">
+            <a href="https://play.google.com/store/apps/details?id=com.chinaski.pliegosric" target="_blank" rel="noopener" class="btn-sec inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-abyss font-semibold text-xs">
+              <i class="fab fa-google-play"></i> Google Play
+            </a>
+            <a href="#" class="btn-outline-sec inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sec-DEFAULT font-semibold text-xs">
+              <i class="fab fa-apple"></i> App Store
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-slate-600 text-xs">Pliegos RIC Chile — Desarrollado por <span class="text-slate-500">Aselec Corporation</span></p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-slate-500 hover:text-sec-DEFAULT transition-colors text-sm"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-slate-500 hover:text-sec-DEFAULT transition-colors text-sm"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="text-slate-500 hover:text-sec-DEFAULT transition-colors text-sm"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    const sectionIds = ['inicio', 'como-se-usa', 'soporte', 'privacidad', 'terminos'];
+
+    function navigateTo(sectionId) {
+      document.querySelectorAll('.section-page').forEach(s => s.classList.remove('active'));
+      const target = document.getElementById('page-' + sectionId);
+      if (target) target.classList.add('active');
+      document.querySelectorAll('.nav-link').forEach(a => {
+        a.classList.toggle('active', a.dataset.nav === sectionId);
+      });
+      document.querySelectorAll('.mobile-nav-link').forEach(a => {
+        a.classList.toggle('active', a.dataset.nav === sectionId);
+      });
+      document.getElementById('mobile-menu').classList.add('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      history.pushState(null, '', '#' + sectionId);
+    }
+
+    document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(a => {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        navigateTo(this.dataset.nav);
+      });
+    });
+
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    function loadFromHash() {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && sectionIds.includes(hash)) {
+        navigateTo(hash);
+      } else {
+        navigateTo('inicio');
+      }
+    }
+    window.addEventListener('hashchange', loadFromHash);
+    loadFromHash();
+
+    function toggleAccordion(btn) {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.fa-chevron-down');
+      const isOpen = content.classList.contains('open');
+      document.querySelectorAll('.legal-accordion-content').forEach(c => {
+        if (c.closest('.card-glass') !== btn.closest('.card-glass')) return;
+        if (c !== content) c.classList.remove('open');
+      });
+      document.querySelectorAll('.card-glass .fa-chevron-down').forEach(i => {
+        if (i.closest('.card-glass') !== btn.closest('.card-glass')) return;
+        if (i !== icon) i.style.transform = 'rotate(0deg)';
+      });
+      content.classList.toggle('open');
+      icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+    }
+
+    function animateCounters() {
+      document.querySelectorAll('.counter-value[data-counted="false"]').forEach(el => {
+        const target = parseInt(el.dataset.target);
+        const duration = 2000;
+        const start = performance.now();
+        function update(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(eased * target).toLocaleString('es-CL');
+          if (progress < 1) requestAnimationFrame(update);
+          else { el.dataset.counted = 'true'; el.textContent = target.toLocaleString('es-CL'); }
+        }
+        requestAnimationFrame(update);
+      });
+    }
+
+    function toggleLegalAccordion(btn, id) {
+      const content = document.getElementById(id);
+      const icon = btn.querySelector('.fa-chevron-down');
+      const isOpen = content.classList.contains('open');
+      content.classList.toggle('open');
+      icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+      if (!isOpen) {
+        content.querySelectorAll('.legal-accordion-content .open').forEach(c => c.classList.remove('open'));
+      }
+    }
+
+    function handleContactForm(e) {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const type = document.getElementById('contact-type').value;
+      const message = document.getElementById('contact-message').value.trim();
+      if (!name || !email || !message) {
+        showToast('Por favor completa todos los campos requeridos.', 'error');
+        return;
+      }
+      const btn = e.target.querySelector('button[type="submit"]');
+      const original = btn.innerHTML;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin text-xs"></i> Enviando...';
+      btn.disabled = true;
+      const formData = new FormData();
+      formData.append('name', name);
+      formData.append('email', email);
+      formData.append('type', type);
+      formData.append('message', message);
+      fetch('https://formsubmit.co/ajax/aselec.eirl@gmail.com', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(r => {
+        if (r.ok) {
+          btn.innerHTML = '<i class="fas fa-check text-xs"></i> Mensaje enviado';
+          btn.style.background = '#059669';
+          e.target.reset();
+          showToast('Mensaje enviado correctamente. Te responderemos pronto.', 'success');
+        } else {
+          btn.innerHTML = '<i class="fas fa-times text-xs"></i> Error al enviar';
+          btn.style.background = '#dc2626';
+          showToast('Error al enviar el mensaje. Intenta de nuevo.', 'error');
+        }
+      }).catch(() => {
+        btn.innerHTML = '<i class="fas fa-times text-xs"></i> Error de conexión';
+        btn.style.background = '#dc2626';
+        showToast('Error de conexión. Verifica tu internet.', 'error');
+      }).finally(() => {
+        setTimeout(() => {
+          btn.innerHTML = original;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 4000);
+      });
+    }
+
+    function showToast(message, type) {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      toast.className = 'toast ' + type;
+      const icons = { success: 'fa-check-circle', error: 'fa-exclamation-circle', info: 'fa-info-circle' };
+      toast.innerHTML = '<i class="fas ' + (icons[type] || icons.info) + '"></i> ' + message;
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.style.animation = 'toastOut 0.3s ease-in forwards';
+        setTimeout(() => toast.remove(), 300);
+      }, 4000);
+    }
+
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      if (!menu.classList.contains('hidden') && !menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.add('hidden');
+      }
+    });
+
+    // Scroll animations with Intersection Observer
+    document.addEventListener('DOMContentLoaded', function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            if (entry.target.classList.contains('counter-value') && entry.target.dataset.counted === 'false') {
+              animateCounters();
+            }
+          }
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.card-glass, .testimonial-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(el);
+      });
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && entry.target.dataset.counted === 'false') {
+            animateCounters();
+          }
+        });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('.counter-value').forEach(el => counterObserver.observe(el));
+    });
+
+    // Carousel
+    let currentSlide = 0;
+    const track = document.getElementById('carousel-track');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    if (track && dots.length) {
+      function goToSlide(index) {
+        currentSlide = index;
+        track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+        dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+      }
+      dots.forEach(d => d.addEventListener('click', () => goToSlide(parseInt(d.dataset.index))));
+      if (prevBtn) prevBtn.addEventListener('click', () => goToSlide(currentSlide > 0 ? currentSlide - 1 : dots.length - 1));
+      if (nextBtn) nextBtn.addEventListener('click', () => goToSlide(currentSlide < dots.length - 1 ? currentSlide + 1 : 0));
+      setInterval(() => goToSlide(currentSlide < dots.length - 1 ? currentSlide + 1 : 0), 4000);
+    }
+
+    // Back to top button
+    const backBtn = document.createElement('button');
+    backBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    backBtn.className = 'fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full bg-sec-DEFAULT text-abyss shadow-[0_0_20px_rgba(255,178,0,0.25)] flex items-center justify-center text-sm opacity-0 translate-y-4 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,178,0,0.35)]';
+    backBtn.style.display = 'none';
+    backBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.body.appendChild(backBtn);
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backBtn.style.display = 'flex';
+        setTimeout(() => { backBtn.style.opacity = '1'; backBtn.style.transform = 'translateY(0)'; }, 10);
+      } else {
+        backBtn.style.opacity = '0';
+        backBtn.style.transform = 'translateY(16px)';
+        setTimeout(() => { backBtn.style.display = 'none'; }, 300);
+      }
+    });
+
+    // Circuit particles canvas
+    (function() {
+      const canvas = document.getElementById('circuit-canvas');
+      const ctx = canvas.getContext('2d');
+      let w, h, particles = [], nodes = [];
+      const PARTICLE_COUNT = 60;
+      const NODE_COUNT = 8;
+      const CONNECTION_DIST = 120;
+
+      function resize() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      class Particle {
+        constructor() {
+          this.reset();
+        }
+        reset() {
+          this.x = Math.random() * w;
+          this.y = Math.random() * h;
+          this.vx = (Math.random() - 0.5) * 0.4;
+          this.vy = (Math.random() - 0.5) * 0.4;
+          this.radius = 1 + Math.random() * 1.5;
+        }
+        update() {
+          this.x += this.vx;
+          this.y += this.vy;
+          if (this.x < 0 || this.x > w) this.vx *= -1;
+          if (this.y < 0 || this.y > h) this.vy *= -1;
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(255,178,0,0.5)';
+          ctx.fill();
+        }
+      }
+
+      class Node {
+        constructor() {
+          this.x = Math.random() * w;
+          this.y = Math.random() * h;
+          this.pulse = Math.random() * Math.PI * 2;
+          this.speed = 0.3 + Math.random() * 0.4;
+        }
+        update() {
+          this.pulse += this.speed * 0.02;
+        }
+        draw() {
+          const size = 3 + Math.sin(this.pulse) * 1.5;
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, size, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(255,178,0,' + (0.3 + Math.sin(this.pulse) * 0.15) + ')';
+          ctx.fill();
+          ctx.shadowBlur = 8;
+          ctx.shadowColor = 'rgba(255,178,0,0.2)';
+          ctx.fill();
+          ctx.shadowBlur = 0;
+        }
+      }
+
+      function init() {
+        particles = [];
+        nodes = [];
+        for (let i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
+        for (let i = 0; i < NODE_COUNT; i++) nodes.push(new Node());
+      }
+      init();
+
+      function drawConnections() {
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < CONNECTION_DIST) {
+              const alpha = (1 - dist / CONNECTION_DIST) * 0.15;
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = 'rgba(255,178,0,' + alpha + ')';
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
+        }
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = 0; j < particles.length; j++) {
+            const dx = nodes[i].x - particles[j].x;
+            const dy = nodes[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < CONNECTION_DIST) {
+              const alpha = (1 - dist / CONNECTION_DIST) * 0.2;
+              ctx.beginPath();
+              ctx.moveTo(nodes[i].x, nodes[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = 'rgba(255,178,0,' + alpha + ')';
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
+        }
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, w, h);
+        particles.forEach(p => { p.update(); p.draw(); });
+        nodes.forEach(n => { n.update(); n.draw(); });
+        drawConnections();
+        requestAnimationFrame(animate);
+      }
+      animate();
+
+      window.addEventListener('resize', () => {
+        setTimeout(init, 300);
+      });
+    })();
+  </script>
+
+</body>
+</html>
