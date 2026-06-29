@@ -6,6 +6,61 @@
   <title>Pliegos RIC Chile V2.0 — Tu guía técnica eléctrica</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Pliegos RIC Chile",
+    "url": "https://ricardochinaski.github.io/",
+    "image": "https://play-lh.googleusercontent.com/kJR3hsfP167tsVfb_aUbRjk_mrxl7NX1WE8ffriSWRYw3dil48aMdP7fQDv-9VEUnloFIQhFN9UgJFnhLcHT=w240-h480-rw",
+    "description": "La suite definitiva para instaladores SEC, ingenieros y proyectistas. Normativa completa, asistente IA, calculadoras técnicas y gestión de proyectos.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Android",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CLP"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "bestRating": "5",
+      "reviewCount": "11"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Los cálculos están basados en la norma chilena vigente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Todas las calculadoras y utilidades se basan exclusivamente en la normativa eléctrica chilena: los Pliegos Técnicos RIC (Reglamento de Instalaciones de Consumo) y RPTD (Reglamento de Instalaciones de Distribución) emitidos por la Superintendencia de Electricidad y Combustibles (SEC). Nos actualizamos con cada nueva versión publicada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿La app funciona en subterráneos o faenas sin internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "¡Sí! Todas las calculadoras técnicas, la normativa completa y las utilidades avanzadas funcionan offline. Una vez que descargas los pliegos y los datos iniciales, puedes usar la app sin conexión. Solo el Asistente IA y los anuncios recompensados requieren internet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo restauro mi compra Premium si cambio de teléfono?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tu suscripción Premium está vinculada a tu cuenta de Google Play (o a tu correo electrónico si te registraste manualmente). Solo inicia sesión con la misma cuenta en tu nuevo dispositivo y la suscripción se restaurará automáticamente. Si tienes problemas, escríbenos a aselec.eirl@gmail.com y te ayudamos al instante."
+        }
+      }
+    ]
+  }
+  </script>
   <meta name="description" content="La suite definitiva para instaladores SEC, ingenieros y proyectistas. Normativa completa, asistente IA, calculadoras técnicas y gestión de proyectos.">
   <meta property="og:title" content="Pliegos RIC Chile V2.0 — Tu guía técnica eléctrica">
   <meta property="og:description" content="La suite definitiva para instaladores SEC, ingenieros y proyectistas. Normativa completa, asistente IA, calculadoras técnicas y gestión de proyectos.">
@@ -17,7 +72,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -359,11 +416,11 @@
                   </div>
                 </div>
                 <div class="flex justify-center gap-2 mt-4">
-                  <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-sec-DEFAULT border-0 cursor-pointer transition-all duration-300 active" data-index="0"></button>
-                  <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-slate-600 border-0 cursor-pointer transition-all duration-300" data-index="1"></button>
-                  <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-slate-600 border-0 cursor-pointer transition-all duration-300" data-index="2"></button>
-                  <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-slate-600 border-0 cursor-pointer transition-all duration-300" data-index="3"></button>
-                  <button class="carousel-dot w-1.5 h-1.5 rounded-full bg-slate-600 border-0 cursor-pointer transition-all duration-300" data-index="4"></button>
+                  <button class="carousel-dot-btn w-8 h-8 flex items-center justify-center border-0 bg-transparent cursor-pointer p-0" data-index="0" aria-label="Ir a la captura 1"><span class="carousel-dot w-1.5 h-1.5 rounded-full bg-sec-DEFAULT transition-all duration-300 active"></span></button>
+                  <button class="carousel-dot-btn w-8 h-8 flex items-center justify-center border-0 bg-transparent cursor-pointer p-0" data-index="1" aria-label="Ir a la captura 2"><span class="carousel-dot w-1.5 h-1.5 rounded-full bg-slate-600 transition-all duration-300"></span></button>
+                  <button class="carousel-dot-btn w-8 h-8 flex items-center justify-center border-0 bg-transparent cursor-pointer p-0" data-index="2" aria-label="Ir a la captura 3"><span class="carousel-dot w-1.5 h-1.5 rounded-full bg-slate-600 transition-all duration-300"></span></button>
+                  <button class="carousel-dot-btn w-8 h-8 flex items-center justify-center border-0 bg-transparent cursor-pointer p-0" data-index="3" aria-label="Ir a la captura 4"><span class="carousel-dot w-1.5 h-1.5 rounded-full bg-slate-600 transition-all duration-300"></span></button>
+                  <button class="carousel-dot-btn w-8 h-8 flex items-center justify-center border-0 bg-transparent cursor-pointer p-0" data-index="4" aria-label="Ir a la captura 5"><span class="carousel-dot w-1.5 h-1.5 rounded-full bg-slate-600 transition-all duration-300"></span></button>
                 </div>
               </div>
             </div>
@@ -1174,6 +1231,7 @@
     let currentSlide = 0;
     const track = document.getElementById('carousel-track');
     const dots = document.querySelectorAll('.carousel-dot');
+    const dotBtns = document.querySelectorAll('.carousel-dot-btn');
     const prevBtn = document.getElementById('carousel-prev');
     const nextBtn = document.getElementById('carousel-next');
     if (track && dots.length) {
@@ -1182,7 +1240,7 @@
         track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
         dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
       }
-      dots.forEach(d => d.addEventListener('click', () => goToSlide(parseInt(d.dataset.index))));
+      dotBtns.forEach(d => d.addEventListener('click', () => goToSlide(parseInt(d.dataset.index))));
       if (prevBtn) prevBtn.addEventListener('click', () => goToSlide(currentSlide > 0 ? currentSlide - 1 : dots.length - 1));
       if (nextBtn) nextBtn.addEventListener('click', () => goToSlide(currentSlide < dots.length - 1 ? currentSlide + 1 : 0));
       setInterval(() => goToSlide(currentSlide < dots.length - 1 ? currentSlide + 1 : 0), 4000);
