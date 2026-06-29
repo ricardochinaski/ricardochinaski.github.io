@@ -243,6 +243,15 @@
     .toast.info { background: rgba(255,178,0,0.9); border: 1px solid rgba(255,178,0,0.3); color: #040D1A; }
     @keyframes toastIn { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
     @keyframes toastOut { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(40px); } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      * { scroll-behavior: auto !important; }
+      #circuit-canvas { display: none !important; }
+    }
   </style>
 </head>
 <body class="font-sans text-slate-300 grid-bg faena-mode min-h-screen antialiased">
@@ -339,14 +348,14 @@
                   <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-1.5 rounded-full bg-white/10 z-20"></div>
                   <div class="overflow-hidden rounded-[24px] bg-navy-900/80 relative" style="aspect-ratio: 9/16;">
                     <div id="carousel-track" class="flex transition-transform duration-500 ease-out h-full" style="transform: translateX(0);">
-                      <img src="https://play-lh.googleusercontent.com/gso8_hhKCbEpiXhwouc3rsDTpkQyHpxkLoRIEv8gL1YJYZjifqvCVGtorNGpL9OeIptSaUpZLRzptyInI5EEbA=w5120-h2880-rw" alt="App screenshot 1" class="w-full h-full shrink-0" style="object-fit: contain;">
-                      <img src="https://play-lh.googleusercontent.com/tprn7HteL2nyD7i-QfLLBpDfFKhzndzpRJGq0yUfGKfAhGjAUfWCSbFsOksptXj3MzJCTcq8B4-XJgSgwfUaBg=w5120-h2880-rw" alt="App screenshot 2" class="w-full h-full shrink-0" style="object-fit: contain;">
-                      <img src="https://play-lh.googleusercontent.com/DCV9aoiFUUENQP_LtUoiFsOnFoyjsGSmlzjktIGP84SrgtzYU9tvRZGI2_Lxalkpwrki-KRlFYzIaGvwzbHDYw=w5120-h2880-rw" alt="App screenshot 3" class="w-full h-full shrink-0" style="object-fit: contain;">
-                      <img src="https://play-lh.googleusercontent.com/1DEGozrtCy-tJ1aALJN_ZwMZ6JzczQhVQQZ142Eaa8g62Ky7e4NGIx-swHO45o4hfIoONzzqgJD6R4qCow13_Q=w5120-h2880-rw" alt="App screenshot 4" class="w-full h-full shrink-0" style="object-fit: contain;">
-                      <img src="https://play-lh.googleusercontent.com/FqtknmdkVXv2MdRLtOSE9wctZEXKjN4cH2eFx32iRecy7ibtcJhibCsvW2rz_nRm00EIXUwiMJg3tMd0jdyKxVM=w5120-h2880-rw" alt="App screenshot 5" class="w-full h-full shrink-0" style="object-fit: contain;">
+                      <img src="https://play-lh.googleusercontent.com/gso8_hhKCbEpiXhwouc3rsDTpkQyHpxkLoRIEv8gL1YJYZjifqvCVGtorNGpL9OeIptSaUpZLRzptyInI5EEbA=w1280-h720-rw" alt="App screenshot 1" class="w-full h-full shrink-0" style="object-fit: contain;">
+                      <img src="https://play-lh.googleusercontent.com/tprn7HteL2nyD7i-QfLLBpDfFKhzndzpRJGq0yUfGKfAhGjAUfWCSbFsOksptXj3MzJCTcq8B4-XJgSgwfUaBg=w1280-h720-rw" alt="App screenshot 2" class="w-full h-full shrink-0" loading="lazy" style="object-fit: contain;">
+                      <img src="https://play-lh.googleusercontent.com/DCV9aoiFUUENQP_LtUoiFsOnFoyjsGSmlzjktIGP84SrgtzYU9tvRZGI2_Lxalkpwrki-KRlFYzIaGvwzbHDYw=w1280-h720-rw" alt="App screenshot 3" class="w-full h-full shrink-0" loading="lazy" style="object-fit: contain;">
+                      <img src="https://play-lh.googleusercontent.com/1DEGozrtCy-tJ1aALJN_ZwMZ6JzczQhVQQZ142Eaa8g62Ky7e4NGIx-swHO45o4hfIoONzzqgJD6R4qCow13_Q=w1280-h720-rw" alt="App screenshot 4" class="w-full h-full shrink-0" loading="lazy" style="object-fit: contain;">
+                      <img src="https://play-lh.googleusercontent.com/FqtknmdkVXv2MdRLtOSE9wctZEXKjN4cH2eFx32iRecy7ibtcJhibCsvW2rz_nRm00EIXUwiMJg3tMd0jdyKxVM=w1280-h720-rw" alt="App screenshot 5" class="w-full h-full shrink-0" loading="lazy" style="object-fit: contain;">
                     </div>
-                    <button id="carousel-prev" class="absolute left-1.5 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-black/50 text-white flex items-center justify-center text-xs border-0 cursor-pointer hover:bg-black/70 hover:scale-110 transition-all opacity-0 group-hover:opacity-100 backdrop-blur-sm" style="opacity: 0.6;"><i class="fas fa-chevron-left"></i></button>
-                    <button id="carousel-next" class="absolute right-1.5 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-black/50 text-white flex items-center justify-center text-xs border-0 cursor-pointer hover:bg-black/70 hover:scale-110 transition-all backdrop-blur-sm" style="opacity: 0.6;"><i class="fas fa-chevron-right"></i></button>
+                    <button id="carousel-prev" class="absolute left-1.5 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-black/50 text-white flex items-center justify-center text-xs border-0 cursor-pointer hover:bg-black/70 hover:opacity-100 hover:scale-110 transition-all backdrop-blur-sm" style="opacity: 0.6;" aria-label="Captura anterior"><i class="fas fa-chevron-left"></i></button>
+                    <button id="carousel-next" class="absolute right-1.5 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-black/50 text-white flex items-center justify-center text-xs border-0 cursor-pointer hover:bg-black/70 hover:opacity-100 hover:scale-110 transition-all backdrop-blur-sm" style="opacity: 0.6;" aria-label="Siguiente captura"><i class="fas fa-chevron-right"></i></button>
                   </div>
                 </div>
                 <div class="flex justify-center gap-2 mt-4">
@@ -1199,9 +1208,10 @@
 
     // Circuit particles canvas
     (function() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       const canvas = document.getElementById('circuit-canvas');
       const ctx = canvas.getContext('2d');
-      let w, h, particles = [], nodes = [];
+      let w, h, particles = [], nodes = [], paused = document.hidden;
       const PARTICLE_COUNT = 60;
       const NODE_COUNT = 8;
       const CONNECTION_DIST = 120;
@@ -1305,13 +1315,20 @@
       }
 
       function animate() {
-        ctx.clearRect(0, 0, w, h);
-        particles.forEach(p => { p.update(); p.draw(); });
-        nodes.forEach(n => { n.update(); n.draw(); });
-        drawConnections();
+        if (!paused) {
+          ctx.clearRect(0, 0, w, h);
+          particles.forEach(p => { p.update(); p.draw(); });
+          nodes.forEach(n => { n.update(); n.draw(); });
+          drawConnections();
+        }
         requestAnimationFrame(animate);
       }
       animate();
+
+      // Pausa el canvas cuando la pestaña no está visible (ahorra batería/CPU en terreno)
+      document.addEventListener('visibilitychange', () => {
+        paused = document.hidden;
+      });
 
       window.addEventListener('resize', () => {
         setTimeout(init, 300);
