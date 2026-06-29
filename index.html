@@ -861,7 +861,7 @@
 
         <div class="card-glass rounded-2xl overflow-hidden">
           <div class="px-6 sm:px-10 py-5 border-b border-white/5">
-            <p class="text-slate-500 text-xs">Última actualización: Junio 2026</p>
+            <p class="text-slate-500 text-xs">Última actualización: 30 de abril de 2026</p>
           </div>
 
           <button class="flex items-center justify-between w-full px-6 sm:px-10 py-4 text-left text-white font-semibold text-sm hover:bg-white/[0.02] transition-colors" onclick="toggleLegalAccordion(this, 'privacidad-all')">
@@ -870,50 +870,102 @@
           </button>
           <div class="legal-accordion-content px-6 sm:px-10 text-slate-300 text-sm leading-relaxed space-y-5" id="privacidad-all">
             <div>
-              <h3 class="text-white font-semibold text-base mb-2">1. Quiénes somos</h3>
-              <p><strong class="text-slate-200">Pliegos RIC Chile</strong> es una aplicación móvil desarrollada por <strong class="text-slate-200">Aselec Corporation</strong>. Esta política explica cómo recopilamos, usamos y protegemos tu información.</p>
+              <h3 class="text-white font-semibold text-base mb-2">1. Identificación del Responsable</h3>
+              <p>La presente Política de Privacidad regula el tratamiento de datos personales de los usuarios de la aplicación móvil <strong class="text-slate-200">Pliegos RIC Chile</strong> (en adelante, "la Aplicación"), desarrollada por <strong class="text-slate-200">Aselec Corporation</strong>.</p>
+              <p class="mt-2">Responsable del tratamiento: <strong class="text-slate-200">Ricardo Silva Saavedra</strong>, Chile.<br>Contacto: <a href="mailto:aselec.eirl@gmail.com" class="text-sec-DEFAULT hover:underline">aselec.eirl@gmail.com</a></p>
             </div>
             <div>
-              <h3 class="text-white font-semibold text-base mb-2">2. Información que recopilamos</h3>
-              <p>Para brindarte una experiencia personalizada y segura, utilizamos <strong class="text-slate-200">Firebase Authentication</strong> para el registro y la autenticación de cuentas. Esto puede incluir tu dirección de correo electrónico, nombre y una contraseña cifrada, o bien los datos de tu cuenta de Google si optas por iniciar sesión con ese método.</p>
-              <p class="mt-2">Adicionalmente, recopilamos datos anónimos de uso y rendimiento para mejorar la aplicación (por ejemplo, qué calculadoras usas con más frecuencia).</p>
+              <h3 class="text-white font-semibold text-base mb-2">2. Aceptación de la Política</h3>
+              <p>El uso de la Aplicación implica la aceptación expresa de los términos contenidos en esta Política de Privacidad. Si no está de acuerdo con alguna de sus disposiciones, le solicitamos que se abstenga de utilizar la Aplicación.</p>
             </div>
             <div>
-              <h3 class="text-white font-semibold text-base mb-2">3. Servicios de terceros</h3>
-              <p>Nuestra app integra los siguientes servicios de terceros para su funcionamiento:</p>
+              <h3 class="text-white font-semibold text-base mb-2">3. Información que Recopilamos</h3>
+              <p>La Aplicación recopila los siguientes datos de forma directa, necesarios para el registro y la gestión de tu cuenta, a través de <strong class="text-slate-200">Firebase Authentication</strong>:</p>
               <ul class="list-disc list-inside space-y-1 text-slate-400 mt-2">
-                <li><strong class="text-slate-200">Google AdMob</strong> — Para la entrega de anuncios banners y videos recompensados. AdMob puede recopilar identificadores publicitarios anónimos para mostrar anuncios relevantes. Puedes gestionar la personalización de anuncios desde los ajustes de tu dispositivo.</li>
-                <li><strong class="text-slate-200">RevenueCat</strong> — Para la gestión segura de transacciones y suscripciones dentro de la app. RevenueCat procesa los pagos a través de las tiendas oficiales (Google Play / App Store) y no almacena datos sensibles de tarjetas de crédito.</li>
-                <li><strong class="text-slate-200">Google Cloud Firestore</strong> — Para almacenar y sincronizar de forma segura tu perfil, preferencias y estado de suscripción entre tus dispositivos.</li>
-                <li><strong class="text-slate-200">Google Gemini (API de IA)</strong> — El texto de tus consultas al Asistente IA se envía a la API de Gemini de Google únicamente para generar la respuesta técnica. No se incluyen datos de tu cuenta (nombre, correo o ID) junto con estas consultas, solo el contenido de la conversación.</li>
+                <li>Correo electrónico, nombre y contraseña cifrada (si te registras con correo), o los datos básicos de tu cuenta de Google (si inicias sesión con ese método).</li>
+                <li>Tus preferencias y el estado de tu suscripción, sincronizados de forma segura entre tus dispositivos a través de <strong class="text-slate-200">Google Cloud Firestore</strong>.</li>
+              </ul>
+              <p class="mt-3">Adicionalmente, a través de los servicios de terceros integrados (descritos en la Sección 5), se puede recopilar automáticamente la siguiente información de uso y diagnóstico:</p>
+              <ul class="list-disc list-inside space-y-1 text-slate-400 mt-2">
+                <li>Identificadores anónimos de dispositivo.</li>
+                <li>Sistema operativo y versión de la Aplicación.</li>
+                <li>Datos de uso y navegación dentro de la Aplicación (pantallas visitadas, frecuencia de uso).</li>
+                <li>Información de rendimiento y errores técnicos (datos de diagnóstico).</li>
+                <li>Información sobre el estado de suscripción (plan activo, historial de compras, a través de RevenueCat).</li>
+                <li>Datos de interacciones con anuncios publicitarios (a través de Google AdMob).</li>
               </ul>
             </div>
             <div>
-              <h3 class="text-white font-semibold text-base mb-2">4. Uso de la información</h3>
-              <p>Usamos tus datos para:</p>
+              <h3 class="text-white font-semibold text-base mb-2">4. Finalidad del Tratamiento de Datos</h3>
+              <p>Los datos recopilados se utilizan exclusivamente para los siguientes fines:</p>
               <ul class="list-disc list-inside space-y-1 text-slate-400 mt-2">
-                <li>Crear y gestionar tu cuenta de usuario.</li>
-                <li>Sincronizar tus preferencias y suscripciones entre dispositivos.</li>
-                <li>Brindarte soporte técnico y responder tus consultas.</li>
-                <li>Mejorar la app con base en patrones de uso anónimos.</li>
+                <li><strong class="text-slate-200">Prestación del servicio:</strong> Garantizar el correcto funcionamiento de la Aplicación, incluyendo la consulta de normativas eléctricas y el asistente de inteligencia artificial.</li>
+                <li><strong class="text-slate-200">Gestión de suscripciones:</strong> Verificar el estado de las suscripciones premium del usuario a través de RevenueCat.</li>
+                <li><strong class="text-slate-200">Publicidad:</strong> Mostrar anuncios relevantes a través de Google AdMob para usuarios de la versión gratuita.</li>
+                <li><strong class="text-slate-200">Mejora del servicio:</strong> Analizar datos agregados y anónimos de uso para optimizar la experiencia del usuario y corregir errores técnicos.</li>
+              </ul>
+              <p class="mt-3">Declaramos expresamente que no vendemos, comercializamos ni cedemos a título oneroso los datos de nuestros usuarios a terceros.</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">5. Servicios de Terceros</h3>
+              <p>La Aplicación integra los siguientes servicios de terceros, cada uno con sus propias políticas de privacidad:</p>
+              <ul class="list-disc list-inside space-y-2 text-slate-400 mt-2">
+                <li><strong class="text-slate-200">Google AdMob</strong> — Proporcionado por Google LLC. Se utiliza para la visualización de publicidad en la versión gratuita de la Aplicación. Google puede recopilar identificadores de dispositivo e información de interacción con anuncios. Política de privacidad: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-sec-DEFAULT hover:underline">policies.google.com/privacy</a></li>
+                <li><strong class="text-slate-200">RevenueCat</strong> — Proporcionado por RevenueCat, Inc. Se utiliza para gestionar las compras dentro de la aplicación, suscripciones premium y restauración de compras. Puede recopilar identificadores de usuario anónimos e historial de transacciones. Política de privacidad: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener" class="text-sec-DEFAULT hover:underline">revenuecat.com/privacy</a></li>
+                <li><strong class="text-slate-200">Firebase (Google)</strong> — Proporcionado por Google LLC. Se utiliza para la autenticación de cuentas (Firebase Authentication) y la sincronización de tus preferencias (Cloud Firestore). Política de privacidad: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-sec-DEFAULT hover:underline">policies.google.com/privacy</a></li>
+                <li><strong class="text-slate-200">Asistente de Inteligencia Artificial</strong> — La funcionalidad de asistente IA procesa las consultas de texto ingresadas por el usuario para generar respuestas. Las consultas pueden ser procesadas por servicios de IA de terceros. No se almacenan conversaciones de forma persistente asociadas a identidades personales.</li>
               </ul>
             </div>
             <div>
-              <h3 class="text-white font-semibold text-base mb-2">5. Derechos del usuario y retención de datos</h3>
-              <p>Respetamos tu privacidad. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición (ARCO) en cualquier momento. Tus datos se conservarán mientras mantengas tu cuenta activa. Si eliminas tu cuenta, todos tus datos personales se borrarán de nuestros servidores en un plazo máximo de 30 días.</p>
+              <h3 class="text-white font-semibold text-base mb-2">6. Base Legal del Tratamiento</h3>
+              <p>El tratamiento de datos se fundamenta en:</p>
+              <ul class="list-disc list-inside space-y-1 text-slate-400 mt-2">
+                <li>El consentimiento del usuario, otorgado al aceptar esta Política al momento de instalar y utilizar la Aplicación.</li>
+                <li>El interés legítimo del responsable para garantizar la seguridad, el correcto funcionamiento y la mejora continua del servicio.</li>
+                <li>El cumplimiento de obligaciones contractuales derivadas de la gestión de suscripciones premium.</li>
+              </ul>
             </div>
             <div>
-              <h3 class="text-white font-semibold text-base mb-2">6. Eliminación de la cuenta</h3>
-              <p>Puedes eliminar tu cuenta y todos tus datos asociados de forma autónoma desde el menú de <strong class="text-slate-200">Ajustes</strong> dentro de la aplicación, opción "Eliminar cuenta". Este proceso es irreversible y borrará permanentemente tu perfil, preferencias y datos de autenticación de Firebase.</p>
-              <p class="mt-2">Si tienes problemas con la eliminación autónoma, contáctanos a <a href="mailto:aselec.eirl@gmail.com" class="text-sec-DEFAULT hover:underline">aselec.eirl@gmail.com</a> y lo gestionaremos manualmente.</p>
+              <h3 class="text-white font-semibold text-base mb-2">7. Conservación de Datos</h3>
+              <p>Los datos de uso y diagnóstico son conservados únicamente durante el tiempo necesario para cumplir con las finalidades descritas en esta Política, o por el plazo que determinen los servicios de terceros según sus propias políticas. Los datos asociados a suscripciones se conservan mientras la relación comercial esté activa y por el período que exijan las obligaciones legales o fiscales aplicables.</p>
             </div>
             <div>
-              <h3 class="text-white font-semibold text-base mb-2">7. Contacto</h3>
-              <p>Para cualquier consulta sobre esta política, escríbenos a <a href="mailto:aselec.eirl@gmail.com" class="text-sec-DEFAULT hover:underline">aselec.eirl@gmail.com</a> o dirígete a la sección de Soporte y Contacto de este sitio.</p>
+              <h3 class="text-white font-semibold text-base mb-2">8. Seguridad de los Datos</h3>
+              <p>Adoptamos medidas técnicas y organizativas razonables para proteger los datos contra el acceso no autorizado, la pérdida, la alteración o la divulgación. Sin embargo, ningún sistema de transmisión de datos a través de internet puede garantizar una seguridad absoluta.</p>
             </div>
             <div>
-              <h3 class="text-white font-semibold text-base mb-2">8. Cambios a esta política</h3>
-              <p>Nos reservamos el derecho de actualizar esta política de privacidad. Cualquier cambio será notificado a través de la aplicación y, cuando sea materialmente relevante, mediante correo electrónico a los usuarios registrados.</p>
+              <h3 class="text-white font-semibold text-base mb-2">9. Derechos de los Usuarios</h3>
+              <p>De conformidad con la Ley N° 19.628 de Chile, usted tiene derecho a:</p>
+              <ul class="list-disc list-inside space-y-1 text-slate-400 mt-2">
+                <li>Acceder a los datos personales que se traten en relación con su persona.</li>
+                <li>Rectificar datos inexactos o incompletos.</li>
+                <li>Cancelar o eliminar sus datos cuando no sean necesarios para la finalidad para la que fueron recopilados.</li>
+                <li>Oponerse al tratamiento de sus datos en los casos previstos por la ley.</li>
+              </ul>
+              <p class="mt-3">Puedes eliminar tu cuenta y todos tus datos asociados de forma autónoma desde el menú de <strong class="text-slate-200">Ajustes → Eliminar cuenta</strong> dentro de la propia Aplicación; este proceso es irreversible. Para ejercer cualquier otro derecho, contáctanos a través del correo indicado en la Sección 1. Responderemos a su solicitud en un plazo máximo de 30 días hábiles.</p>
+              <p class="mt-2">Adicionalmente, en la configuración de su dispositivo (iOS o Android) puede gestionar los permisos de la Aplicación, limitar el seguimiento publicitario y, en el caso de iOS, activar la opción "Pedir no rastrear" (ATT Framework).</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">10. Privacidad de Menores de Edad</h3>
+              <p>La Aplicación no está dirigida a menores de 14 años. No recopilamos intencionalmente datos de menores de dicha edad. Si un padre o tutor toma conocimiento de que un menor ha proporcionado información personal, puede contactarnos para solicitar su eliminación.</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">11. Transferencia Internacional de Datos</h3>
+              <p>Los servicios de terceros integrados en la Aplicación (Google AdMob, Firebase y RevenueCat) pueden transferir y procesar datos en servidores ubicados fuera de Chile, incluyendo los Estados Unidos. Dichas transferencias se realizan con base en las garantías contractuales y certificaciones de seguridad de cada proveedor.</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">12. Cambios en la Política de Privacidad</h3>
+              <p>Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Las modificaciones serán notificadas mediante una actualización de la fecha indicada al inicio de este documento y, cuando los cambios sean sustanciales, a través de un aviso dentro de la propia Aplicación. El uso continuado de la Aplicación tras la publicación de cambios implica la aceptación de los mismos.</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">13. Legislación Aplicable y Jurisdicción</h3>
+              <p>Esta Política se rige por las leyes de la República de Chile, en particular la Ley N° 19.628 sobre Protección de la Vida Privada y sus normas complementarias. Para cualquier controversia derivada de la interpretación o aplicación de esta Política, las partes se someten a la jurisdicción de los tribunales competentes de la ciudad de Santiago de Chile.</p>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-2">14. Contacto</h3>
+              <p>Para cualquier consulta, comentario o ejercicio de derechos relacionados con esta Política de Privacidad, puede contactarnos en:</p>
+              <p class="mt-2"><strong class="text-slate-200">Ricardo Silva Saavedra</strong><br>Correo electrónico: <a href="mailto:aselec.eirl@gmail.com" class="text-sec-DEFAULT hover:underline">aselec.eirl@gmail.com</a><br>Chile</p>
+              <p class="mt-3 text-slate-500 text-xs">Esta Política de Privacidad ha sido redactada conforme a la Ley N° 19.628 de Chile y con consideración de estándares internacionales de protección de datos.</p>
             </div>
           </div>
         </div>
